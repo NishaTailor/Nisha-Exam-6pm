@@ -1,8 +1,9 @@
-// Find Missing Number
-let array=[1, 2, 4, 5, 6];
-let n=array.length
-
-for(let i=0; i<n; i++){
-    n*(n+1)/2.
+function findMissingNumber(arr) {
+    const n = arr.length + 1;
+    const expectedSum = (n * (n + 1)) / 2;
+    const actualSum = arr.reduce((acc, num) => acc + num, 0);
+    return expectedSum - actualSum;
 }
-console.log(array[i]);
+
+const arr = [1, 2, 4, 5, 6];
+console.log(findMissingNumber(arr)); 
